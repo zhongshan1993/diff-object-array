@@ -10,9 +10,9 @@ module.exports = function(oldArray, curArray, idKey = 'id') {
           return pre === next;
       }
   };
-  let intersectionArray = intersectionWith(originArray, currentArray, isEqual);
-  let deleteDifferArray = differenceWith(originArray, intersectionArray, isEqual);
-  let addDifferArray = differenceWith(currentArray, intersectionArray, isEqual);
+  let intersectionArray = intersectionWith(oldArray, curArray, isEqual);
+  let deleteDifferArray = differenceWith(oldArray, intersectionArray, isEqual);
+  let addDifferArray = differenceWith(curArray, intersectionArray, isEqual);
   return {
       arrayDeleted: deleteDifferArray,
       arrayAdded: addDifferArray
